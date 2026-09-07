@@ -52,7 +52,7 @@ export const AppointmentModal = () => {
   return (
     <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}>
       <div 
-        className="bg-white rounded-xl w-full max-w-md shadow-2xl overflow-hidden flex flex-col max-h-[95vh] animate-in fade-in zoom-in-95 duration-200" 
+        className="bg-white rounded-xl w-full max-w-2xl shadow-2xl overflow-hidden flex flex-col max-h-[95vh] animate-in fade-in zoom-in-95 duration-200" 
         onClick={e => e.stopPropagation()}
       >
         <div className="flex justify-between items-center p-6 border-b border-slate-100 bg-brand-ivory">
@@ -67,19 +67,21 @@ export const AppointmentModal = () => {
             Your enquiry will be prepared. Continue on WhatsApp to confirm your appointment with the clinic.
           </div>
           
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">Full Name <span className="text-red-500">*</span></label>
-            <input required type="text" className="w-full border border-slate-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-600" 
-              value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">Phone Number <span className="text-red-500">*</span></label>
-            <input required type="tel" pattern="[0-9]{10}" title="10 digit phone number" className="w-full border border-slate-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-600" 
-              value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Full Name <span className="text-red-500">*</span></label>
+              <input required type="text" className="w-full border border-slate-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-600" 
+                value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Phone Number <span className="text-red-500">*</span></label>
+              <input required type="tel" pattern="[0-9]{10}" title="10 digit phone number" className="w-full border border-slate-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-600" 
+                value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">Preferred Date <span className="text-red-500">*</span></label>
               <input required type="date" className="w-full border border-slate-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-600 text-slate-700" 
@@ -112,7 +114,7 @@ export const AppointmentModal = () => {
 
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Message (Optional)</label>
-            <textarea rows={3} className="w-full border border-slate-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-600 resize-none"
+            <textarea rows={2} className="w-full border border-slate-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-600 resize-none"
               value={formData.message} onChange={e => setFormData({...formData, message: e.target.value})}></textarea>
           </div>
 
