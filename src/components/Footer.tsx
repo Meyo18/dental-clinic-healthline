@@ -1,7 +1,7 @@
 import { clinic } from '../config/clinic';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faPhoneAlt, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhoneAlt, faEnvelope, faMapMarkerAlt, faTooth } from '@fortawesome/free-solid-svg-icons';
 
 export const Footer = () => {
   return (
@@ -11,7 +11,8 @@ export const Footer = () => {
 
           <div>
             <div className="flex items-center gap-2 mb-6 text-brand-teal">
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+              <FontAwesomeIcon icon={faTooth} className="mt-1 shrink-0 text-xl" />
+                
               <span className="text-xl font-bold text-slate-900 leading-tight">{clinic.name}</span>
             </div>
             <p className="text-slate-500 text-sm mb-6 leading-relaxed">

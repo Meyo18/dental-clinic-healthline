@@ -2,7 +2,7 @@ import {
   faStethoscope,
   faHandSparkles,
   faHeartPulse,
-  faShieldHalved,
+  faTooth,
   faSmile,
   faTeeth,
   faBaby,
@@ -68,7 +68,7 @@ export const treatments = [
     id: "dental-implants",
     title: "Dental Implants",
     description: "Replacement options for missing teeth.",
-    icon: faShieldHalved,
+    icon: faTooth,
     details: "Dental implants are titanium posts surgically placed into the jawbone beneath your gums to mount replacement teeth or a bridge.",
     whenToConsider: "When you are missing one or more teeth and want a permanent, stable, and natural-looking replacement.",
     process: "The implant is placed in the jawbone, allowed to heal and integrate over a few months, and then a custom-made crown is attached to restore full function."

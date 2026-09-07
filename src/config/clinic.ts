@@ -5,7 +5,7 @@ export const clinic = {
   city: "Kanpur",
   address: "In front of Mariampur Hospital, Lajpat Nagar, Kanpur, Uttar Pradesh, India",
   phone: "8924879153",
-  whatsapp: "REPLACE_WITH_WHATSAPP",
+  whatsapp: "918924879152",
   email: "info@healthlineclinics.in",
   timings: "Mon - Sat: 10:00 AM - 8:00 PM\nSunday: By Appointment",
   googleMapsUrl: "https://maps.app.goo.gl/TBh3ddzgqYwdYikc8",
